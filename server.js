@@ -6,7 +6,7 @@ var bodyParser = require("body-parser");
 
 
 /* Serving static files in express */
-app.use(express.static('morgi'));
+app.use(express.static('morgi2'));
 // app.use('morgi/css', express.static('css'));
 // app.use('morgi/vendor', express.static('vendor'));
 
@@ -19,11 +19,12 @@ app.use(bodyParser.json());
 app.get('/', function(req, res) {
 
     /* Sends the index html page to the user */
-    fs.readFile('morgi/index.html', 'utf8', function(err, data) {
+    fs.readFile('morgi2/index.html', 'utf8', function(err, data) {
         if (!err) res.send(data);
         else return console.log(err);
     });
 });
+
 
 var server = app.listen(process.env.PORT || '8080', '0.0.0.0', function() {
     var host = server.address().address;
