@@ -7,12 +7,14 @@
     ----------------------------------------------------------------- 
 
 
-Hi there! Welcome to Cloud9 IDE!
+## In order to start the server execute this exact command on the terminal 
+/home/ubuntu/workspace/google-cloud-sdk/bin/dev_appserver.py app.yaml --host $IP
 
-To get you started, create some files, play with the terminal,
-or visit http://docs.c9.io for our documentation.
-If you want, you can also go watch some training videos at
-http://www.youtube.com/user/c9ide.
+## The application will be running on this link
+https://morgiidad-abdallahozaifa.c9users.io/
 
-Happy coding!
-The Cloud9 IDE team
+## To deploy this application execute this exact command
+/home/ubuntu/workspace/google-cloud-sdk/bin/gcloud app deploy app.yaml --project markdistrictwebsite
+
+## The application is currently hosted on this link
+https://markdistrictwebsite.appspot.com/
