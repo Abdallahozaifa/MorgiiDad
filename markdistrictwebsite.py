@@ -25,17 +25,15 @@ class MainPage(Handler):
 		def post(self):
 			name = self.request.get('name')
 			email = self.request.get('email')
-			message = self.request.get('message')
+			message = self.request.get('descr')
 			
-			if (name and email and message):
-				mail_message = mail.EmailMessage(sender="abdallahozaifa19527@gmail.com", subject="%s at <%s> emailed you from hozaifaabdalla.com!" % (name, email))
-				mail_message.to = "Hozaifa Abdalla<abdallahozaifa19527@gmail.com>"
-				mail_message.body = message
-				mail_message.send()
-				time.sleep(6)
-				self.redirect('/index.html#form')
-			else:
-				time.sleep(50)
-				self.redirect("/index.html#form")
+			print name;
+			print email;
+			print message;
+			
+			mail_message = mail.EmailMessage(sender="atterholtfordistrictjudge@gmail.com", subject="%s at <%s> emailed you from atterholtfordistrictjudge.com!" % (name, email))
+			mail_message.to = "Mark Atterholt<atterholtfordistrictjudge@gmail.com>"
+			mail_message.body = message
+			mail_message.send()
 
 app = webapp2.WSGIApplication([('/', MainPage)])

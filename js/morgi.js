@@ -16,7 +16,7 @@ $(document).ready(function() {
 
         /* Send contact info to the server */
         $.ajax({
-            url: "http://morgiidad-abdallahozaifa.c9users.io/email",
+            url: "/",
             method: "POST",
             type: 'json',
             data: {

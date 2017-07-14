@@ -1,5 +1,3 @@
-application: markdistrictwebsite
-version: 1 
 runtime: python27
 api_version: 1
 threadsafe: true
@@ -18,3 +16,8 @@ libraries:
 - name: jinja2
   version: latest
 
+# skip_files:
+# - /home/ubuntu/workspace/.c9
+# - /home/ubuntu/workspace/.git
+# - /home/ubuntu/workspace/google-cloud-sdk
+# - /home/ubuntu/workspace/README.md
