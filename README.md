@@ -18,3 +18,7 @@ https://morgiidad-abdallahozaifa.c9users.io/
 
 ## The application is currently hosted on this link
 https://markdistrictwebsite.appspot.com/
+
+## To watch the server logs
+/home/ubuntu/workspace/google-cloud-sdk/gcloud app logs tail -s default
+
