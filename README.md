@@ -13,5 +13,5 @@
 ## The application will be running on this link
 https://morgiidad-abdallahozaifa.c9users.io/
 
-## TO DEPLOY THIS APPLICATION EXECUTE THIS EXACT COMMAND
+## To deploy this application execute this exact command
 /home/ubuntu/workspace/google-cloud-sdk/bin/gcloud app deploy app.yaml --project markdistrictwebsite
