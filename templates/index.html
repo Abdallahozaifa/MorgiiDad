@@ -14,12 +14,21 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:700|Patua+One|Roboto+Condensed:700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../static/css/magnific-popup.css" type="text/css">
 </head>
 
-<body>
+
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Magnific Popup core JS file -->
+<script src="../js/jquery.magnific-popup.js"></script>
+
+<body id="top">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-offset">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -27,27 +36,71 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-                <a class="navbar-brand" href="#">Mark Atterholt</a>
+                <a class="navbar-brand" href="#top" style="color:white">Mark Atterholt</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#aboutmark">About Mark</a></li>
-                    <li><a href="#photogallery">Photo Gallery</a></li>
-                    <li><a href="#upcomingevents">Upcoming Events</a></li>
-                    <li><a href="#contactme">Contact Us</a></li>
-                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#aboutmark" style="color:white">About Mark</a></li>
+                    <li><a href="#photogallery" style="color:white">Photo Gallery</a></li>
+                    <li><a href="#upcomingevents" style="color:white">Upcoming Events</a></li>
+                    <li><a href="#contactme" style="color:white">Contact Us</a></li>
+                    <li><a href="#donate" style="color:white">Donate</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- First Container -->
-    <div class="container-fluid bg-1 text-center">
+    <div class="container-fluid bg-1 text-center dad-background">
 
-        <h1 class="margin">Mark Atterholt</h1>
-        <img src="https://scontent.fphl2-2.fna.fbcdn.net/v/t1.0-9/16002984_1516159075068643_397526033328307944_n.jpg?oh=92a76d8a4d505b068ccc3350af878eb1&oe=59FFF033" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-        <h4>Candidate for Magisterial District Judge</h4>
-        <h3>Info About Dad</h3>
+        <!--<h1 class="margin">Mark Atterholt</h1>-->
+        <!--<img src="https://scontent.fphl2-2.fna.fbcdn.net/v/t1.0-9/16002984_1516159075068643_397526033328307944_n.jpg?oh=92a76d8a4d505b068ccc3350af878eb1&oe=59FFF033" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">-->
+        <!--<h4>Candidate for Magisterial District Judge</h4>-->
+        <!--<h3>Info About Dad</h3>-->
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-4">
+
+
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <div class="panel panel-default panel-front">
+
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a HREF="#"><img class="img-dad" src="https://scontent.fphl2-2.fna.fbcdn.net/v/t1.0-9/16002984_1516159075068643_397526033328307944_n.jpg?oh=92a76d8a4d505b068ccc3350af878eb1&oe=59FFF033"></a>
+                            </h4>
+
+                        </div>
+
+                        <div class="panel-body">
+                            <h4>Mark Atterholt</h4>
+
+                            <p>Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year.</p>
+
+                            <div class="text-right">
+                                <a href="#" class="btn btn-info btn-sm" role="button">Call Your Boy OG</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-4">
+
+
+
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
     <!-- Second Container -->
@@ -57,21 +110,22 @@
 
     </div>
 
+
     <!-- Third Container (Grid) -->
     <div class="container-fluid bg-3 text-center" id="photogallery">
         <h3 class="margin">Photo Gallery</h3><br>
         <div class="row">
             <div class="col-sm-4">
-                <p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <img src="" class="img-responsive margin" style="width:100%" alt="Image">
+                <p> Mark Atterholt for District Judge supports at the steak fry fundraiser</p>
+                <a class="group-photo-link-1" href="../static/images/ClearGroupPhoto.jpg"><img src="../static/images/ClearGroupPhoto.jpg" class="img-responsive margin group-photo" style="width:100%" alt="Image"></a>
             </div>
             <div class="col-sm-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <img src="" class="img-responsive margin" style="width:100%" alt="Image">
+                <p>Mark with his mother, Lois, and youngest son, Luke</p>
+                <a class="group-photo-link-2" href="../static/images/family.jpg"><img src="../static/images/family.jpg" class="img-responsive margin group-photo" style="width:750px;height:350px" alt="Image"></a>
             </div>
             <div class="col-sm-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <img src="" class="img-responsive margin" style="width:100%" alt="Image">
+                <p>Mark with his family and supporters at the Avenue of 444 flags</p>
+                <a class="group-photo-link-3" href="../static/images/beginning.jpg"><img src="../static/images/beginning.jpg" class="img-responsive margin group-photo" style="width:750px;height:350px" alt="Image"></a>
             </div>
         </div>
     </div>
@@ -80,18 +134,18 @@
     <div class="container-fluid bg-2 text-center" id="upcomingevents">
         <h3 class="margin">Upcoming Events</h3><br>
         <div class="row">
-            <div class="col-sm-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <img src="" class="img-responsive margin" style="width:100%" alt="Image">
+            <div>
+                <p>July 17th, 2017: Farrell FOP Steak Fry</p>
+                <p>August 12th, 2017: Lakeland FOP Steak Fry</p>
+                <p>August 19th, 2017: Hermitage Fire Department Gun Raffle </p>
+                <p>August 28th, 2017: Hermitage FOP Steak Fry</p>
+                <p>September 4th, 2017: Buhl Day</p>
+                <p>October 10th, 2017: Last Day to Register to vote!</p>
+                <p>October 31st, 2017: Last Day to Apply for Civilian Absentee Ballot</p>
+                <p>November 3rd, 2017: Last Day for County to Receive Voted Civilian Absentee Ballotts</p>
+                <p>Novemeber 7th, 2017: Municipal Election! </p>
             </div>
-            <div class="col-sm-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <img src="" class="img-responsive margin" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <img src="" class="img-responsive margin" style="width:100%" alt="Image">
-            </div>
+
         </div>
     </div>
 
@@ -101,6 +155,7 @@
                 <div class="container">
                     <h2>Contact Us</h2>
                     <p>We would love to hear your feedback, questions or concerns!</p>
+                    <p>If you would like to volunteer, host a yard sign, or help up with campaign ideas, please mention this in your email!</p>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <form class="form-horizontal">
@@ -122,7 +177,7 @@
                             <hr>
                             <h3>Our Social Sites</h3>
                             <ul class="list-inline banner-social-buttons">
-                                <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook"> <span class="network-name">Facebook</span></i></a></li>
+                                <li><a href="https://www.facebook.com/Mark-Atterholt-for-District-Judge-1509789755705575/" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-facebook"> <span class="network-name">Facebook</span></i></a></li>
 
                             </ul>
                         </div>
@@ -134,8 +189,8 @@
 
     <div class="container-fluid bg-2 text-center" id="donate">
         <h3 class="margin">Donate</h3>
-        <li><a href="#" class="btn btn-default btn-lg"><i class="network-name">Paypal</span></i></a></li>
-        <p>Any donations will be used towards fundraisers, campainging, and networking and will be greatly appreciated! </p>
+        <p>Any donations will be used towards fundraisers, campainging or networking, and will be greatly appreciated! </p>
+        <a href="#" class="btn btn-default btn-lg"><i class="network-name">Paypal</span></i></a>
 
     </div>
 

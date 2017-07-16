@@ -1,57 +1,117 @@
-        body {
-            font: 20px Montserrat, sans-serif;
-            line-height: 1.8;
-            color: #f5f6f7;
-        }
-        
-        p {
-            font-size: 16px;
-        }
-        
-        .margin {
-            margin-bottom: 45px;
-        }
-        
-        .bg-1 {
-            background-color: #2f2f2f;
-            /* Green */
-            color: #ffffff;
-        }
-        
-        .bg-2 {
-            background-color: #474e5d;
-            /* Dark Blue */
-            color: #ffffff;
-        }
-        
-        .bg-3 {
-            background-color: #ffffff;
-            /* White */
-            color: #555555;
-        }
-        
-        .bg-4 {
-            background-color: #2f2f2f;
-            /* Black Gray */
-            color: #fff;
-        }
-        
-        .container-fluid {
-            padding-top: 70px;
-            padding-bottom: 70px;
-        }
-        
-        .navbar {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            border: 0;
-            border-radius: 0;
-            margin-bottom: 0;
-            font-size: 12px;
-            letter-spacing: 5px;
-        }
-        
-        .navbar-nav li a:hover {
-            color: #1abc9c !important;
-        }
-        
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+}
+
+p {
+    font-size: 16px;
+}
+
+.margin {
+    margin-bottom: 45px;
+}
+
+.bg-1 {
+    background-color: #2f2f2f;
+    /* Green */
+    color: #ffffff;
+}
+
+.bg-2 {
+    background-color: #474e5d;
+    /* Dark Blue */
+    color: #ffffff;
+}
+
+.bg-3 {
+    background-color: #ffffff;
+    /* White */
+    color: #555555;
+}
+
+.bg-4 {
+    background-color: #2f2f2f;
+    /* Black Gray */
+    color: #fff;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.navbar-nav li a:hover {
+    color: #A52A2A !important;
+}
+
+.group-photo {
+    border-radius: 10px;
+}
+
+.dad-background {
+    background: url("http://www.euclidlibrary.org/images/tickle-your-brain/random-wallpapers-american-flag-wallpaper-34317.jpg?sfvrsn=0") no-repeat fixed;
+    background-size: cover;
+    background-position: 1%;
+}
+
+
+/*.img-dad {*/
+
+
+/*    border-radius: 50%;*/
+
+
+/*}*/
+
+.panel-front {
+    /* Only for this preview */
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.panel-front .panel-heading .panel-title img {
+    border-radius: 3px 3px 0px 0px;
+    width: 100%;
+}
+
+.panel-front .panel-heading {
+    padding: 0px;
+}
+
+.panel-front .panel-heading h4 {
+    line-height: 0;
+}
+
+.panel-front .panel-body h4 {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.text-right {
+    margin-top: 10px;
+}
+
+.bg-1 {
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+    /*position: fixed;*/
+    width: 100%;
+    /*opacity: 1;*/
+    background-color: #2f2f2f;
+    color: white;
+}

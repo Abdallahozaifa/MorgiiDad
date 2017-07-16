@@ -35,5 +35,5 @@ class MainPage(Handler):
 			mail_message.to = "Mark Atterholt<atterholtfordistrictjudge@gmail.com>"
 			mail_message.body = message
 			mail_message.send()
-
+			
 app = webapp2.WSGIApplication([('/', MainPage)])

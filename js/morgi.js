@@ -1,9 +1,23 @@
-/* global $, ajax*/
+/* global $*/
 $(document).ready(function() {
-    console.log("morgi");
+    console.log("Morgi JS File Running! :)");
 
+    /* Variable Declarations */
     var form = {};
-    form.submit = $("#submit");
+    var imgCount = 1;
+    // All of the images in the photo gallery 
+    var pics = [{
+        src: "../static/images/ClearGroupPhoto.jpg",
+        title: "Clear Group Photo"
+    }, {
+        src: '../static/images/family.jpg',
+        title: 'Family'
+    }, {
+        src: '../static/images/beginning.jpg',
+        title: 'Beginning'
+    }];
+
+    form.submit = $("#submit"); // form submit button
 
     /* Click handler that executes when user clicks submit button */
     form.submit.click(function(e) {
@@ -14,7 +28,7 @@ $(document).ready(function() {
         console.log(form.email.val());
         console.log(form.descr.val());
 
-        /* Send contact info to the server */
+        /* Send contact info to the server through a post request */
         $.ajax({
             url: "/",
             method: "POST",
@@ -26,9 +40,8 @@ $(document).ready(function() {
             },
             crossDomain: true
         }, function success(data) {
-            
-        });
 
+        });
         e.preventDefault();
         clearForm();
     });
@@ -39,4 +52,66 @@ $(document).ready(function() {
         form.email.val("");
         form.descr.val("");
     };
+
+    /* Adds a picture object to the pics array */
+    var addPic = function(imageName, title) {
+        pics.push({
+            src: "../static/images/" + imageName,
+            title: title
+        });
+    };
+
+    /* Animates a magnific pop up event to an image passed in */
+    var animatePic = function(picArr) {
+        var clsName = ".group-photo-link-" + imgCount;
+        $(clsName).magnificPopup({
+            items: picArr,
+            gallery: {
+                enabled: true
+            },
+            type: 'image'
+        });
+        imgCount++;
+    };
+
+    /* Adds the magnific pop up to every picture in the pics array */
+    var magnificAllPics = function() {
+        var count = 0;
+        var picsLen = pics.length;
+        while (count < picsLen) {
+            if (count == 0) {
+                animatePic(pics);
+            }
+            else {
+                var picElm = pics[0];
+                pics.splice(0, 1);
+                pics.push(picElm);
+                animatePic(pics);
+            }
+            count++;
+        }
+    };
+
+    /* Scrolls to the anchor tag slowly */
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    });
+
+    /* Function Calls */
+
+    /******************************************************** 
+     *  AREA TO ADD PICTURE TO PAGE                          *
+     *  MUST BE BEFORE magnificAllPics function call below!  *
+     *  EX. addPic('hozaifa.jpg', 'Hozaifa is awesome!');    *
+     *********************************************************/
+
+
+    //DON'T TOUCH
+    magnificAllPics();
 });
