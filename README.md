@@ -8,7 +8,7 @@
 
 
 ## In order to start the server execute this exact command on the terminal 
-/home/ubuntu/workspace/google-cloud-sdk/bin/dev_appserver.py app.yaml --host $IP
+/home/ubuntu/workspace/google-cloud-sdk/bin/dev_appserver.py app.yaml --host $IP --admin_port=9000
 
 ## The application will be running on this link
 https://morgiidad-abdallahozaifa.c9users.io/
