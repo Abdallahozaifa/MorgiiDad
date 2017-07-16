@@ -112,4 +112,6 @@ $(document).ready(function() {
 
     //DON'T TOUCH
     magnificAllPics();
+    
+    AOS.init();
 });
