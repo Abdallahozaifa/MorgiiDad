@@ -31,9 +31,9 @@ class MainPage(Handler):
 			print email;
 			print message;
 			
-			mail_message = mail.EmailMessage(sender="atterholtfordistrictjudge@gmail.com", subject="%s at <%s> emailed you from atterholtfordistrictjudge.com!" % (name, email))
-			mail_message.to = "Mark Atterholt<atterholtfordistrictjudge@gmail.com>"
-			mail_message.body = message
-			mail_message.send()
+			# mail_message = mail.EmailMessage(sender="atterholtfordistrictjudge@gmail.com", subject="%s at <%s> emailed you from atterholtfordistrictjudge.com!" % (name, email))
+			# mail_message.to = "Mark Atterholt<atterholtfordistrictjudge@gmail.com>"
+			# mail_message.body = message
+			# mail_message.send()
 			
 app = webapp2.WSGIApplication([('/', MainPage)])

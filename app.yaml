@@ -16,6 +16,5 @@ libraries:
 - name: jinja2
   version: latest
 
-skip_files: 
-- ^(bower_components/.*)
+# skip_files: 
 # - ^(google-cloud-sdk/.*)
