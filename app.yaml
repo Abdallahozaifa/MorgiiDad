@@ -18,4 +18,4 @@ libraries:
 
 skip_files: 
 - ^(bower_components/.*)
-- ^(google-cloud-sdk/.*)
+# - ^(google-cloud-sdk/.*)

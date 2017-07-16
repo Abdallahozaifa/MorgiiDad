@@ -6,16 +6,7 @@ $(document).ready(function() {
     var form = {};
     var imgCount = 1;
     // All of the images in the photo gallery 
-    var pics = [{
-        src: "../static/images/ClearGroupPhoto.jpg",
-        title: "Clear Group Photo"
-    }, {
-        src: '../static/images/family.jpg',
-        title: 'Family'
-    }, {
-        src: '../static/images/beginning.jpg',
-        title: 'Beginning'
-    }];
+    var pics = [];
 
     form.submit = $("#submit"); // form submit button
 
@@ -110,7 +101,14 @@ $(document).ready(function() {
      *  MUST BE BEFORE magnificAllPics function call below!  *
      *  EX. addPic('hozaifa.jpg', 'Hozaifa is awesome!');    *
      *********************************************************/
-
+    addPic('dave.jpg', 'Dave!');
+    addPic('family.jpg', 'Familia! <3');
+    addPic('beginning.jpg', 'When I became an OG!');
+    addPic('ClearGroupPhoto.jpg', 'Hanging with the big dogs!');
+    addPic('group.jpg', 'Chilling with the homies! :))');
+    addPic('sign.jpg', 'Holding up the signs!');
+    addPic('soup.jpg', 'I like eating soup!');
+    addPic('mercer.jpeg', 'I like mercer!');
 
     //DON'T TOUCH
     magnificAllPics();
