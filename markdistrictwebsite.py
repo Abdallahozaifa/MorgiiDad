@@ -24,14 +24,21 @@ class MainPage(Handler):
 				   self.render("index.html")
 		def post(self):
 			name = self.request.get('name')
+			phone = self.request.get('phone')
 			email = self.request.get('email')
-			message = self.request.get('descr')
+			message = self.request.get('message')
 			
 			print name;
+			print phone;
 			print email;
 			print message;
 			
-			# mail_message = mail.EmailMessage(sender="atterholtfordistrictjudge@gmail.com", subject="%s at <%s> emailed you from atterholtfordistrictjudge.com!" % (name, email))
+			if phone == "":
+				mail_message = mail.EmailMessage(sender="atterholtfordistrictjudge@gmail.com", subject="%s at <%s> emailed you from atterholtfordistrictjudge.com!" % (name, email))
+			else:
+				mail_message = mail.EmailMessage(sender="atterholtfordistrictjudge@gmail.com", subject="%s at <%s (%s)> emailed you from atterholtfordistrictjudge.com!" % (name, email, phone))
+			
+			dir(mail_message)
 			# mail_message.to = "Mark Atterholt<atterholtfordistrictjudge@gmail.com>"
 			# mail_message.body = message
 			# mail_message.send()

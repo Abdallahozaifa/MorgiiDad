@@ -1,4 +1,4 @@
-/* global $*/
+/* global $, AOS*/
 $(document).ready(function() {
     console.log("Morgi JS File Running! :)");
 
@@ -8,27 +8,45 @@ $(document).ready(function() {
     // All of the images in the photo gallery 
     var pics = [];
 
-    form.submit = $("#submit"); // form submit button
+    form.submit = $(".submit-btn"); // form submit button
 
     /* Click handler that executes when user clicks submit button */
     form.submit.click(function(e) {
-        form.name = $("#name");
-        form.email = $("#email");
-        form.descr = $("#Description");
-        console.log(form.name.val());
+        form.firstName = $("#form_firstname");
+        form.lastName = $("#form_lastname");
+        form.email = $("#form_email");
+        form.phone = $("#form_phone");
+        form.message = $("#form_message");
+        console.log(form.firstName.val());
+        console.log(form.lastName.val());
         console.log(form.email.val());
-        console.log(form.descr.val());
+        console.log(form.phone.val());
+        console.log(form.message.val());
+
+        var emailData = {};
+
+        if (form.phone != "") {
+            emailData = {
+                "name": form.firstName.val() + " " + form.lastName.val(),
+                "phone": form.phone.val(),
+                "email": form.email.val(),
+                "message": form.message.val()
+            };
+        }
+        else {
+            emailData = {
+                "name": form.firstName.val() + " " + form.lastName.val(),
+                "email": form.email.val(),
+                "message": form.message.val()
+            }
+        }
 
         /* Send contact info to the server through a post request */
         $.ajax({
             url: "/",
             method: "POST",
             type: 'json',
-            data: {
-                "name": form.name.val(),
-                "email": form.email.val(),
-                "descr": form.descr.val()
-            },
+            data: emailData,
             crossDomain: true
         }, function success(data) {
 
@@ -39,9 +57,11 @@ $(document).ready(function() {
 
     /* Clears the form */
     var clearForm = function() {
-        form.name.val("");
+        form.firstName.val("");
+        form.lastName.val("");
+        form.phone.val("");
         form.email.val("");
-        form.descr.val("");
+        form.message.val("");
     };
 
     /* Adds a picture object to the pics array */
@@ -101,17 +121,17 @@ $(document).ready(function() {
      *  MUST BE BEFORE magnificAllPics function call below!  *
      *  EX. addPic('hozaifa.jpg', 'Hozaifa is awesome!');    *
      *********************************************************/
-    addPic('dave.jpg', 'Dave!');
+    addPic('Christmas.jpg', 'Dave!');
     addPic('family.jpg', 'Familia! <3');
     addPic('beginning.jpg', 'When I became an OG!');
     addPic('ClearGroupPhoto.jpg', 'Hanging with the big dogs!');
-    addPic('group.jpg', 'Chilling with the homies! :))');
+    addPic('children.jpeg', 'Chilling with the homies! :))');
     addPic('sign.jpg', 'Holding up the signs!');
     addPic('soup.jpg', 'I like eating soup!');
-    addPic('mercer.jpeg', 'I like mercer!');
+    addPic('dave.jpg', 'I like mercer!');
 
     //DON'T TOUCH
     magnificAllPics();
-    
+
     AOS.init();
 });
