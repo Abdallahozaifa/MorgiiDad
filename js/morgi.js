@@ -113,7 +113,70 @@ $(document).ready(function() {
             }, 1000);
         }
     });
+    
+    
+    var createEvent = function(month, day, title, description){
+        var li = document.createElement("li");
+        $(".event-list").append(li);
+        
+        var time = document.createElement("time");
+        time.className = "event-date";
+        
+        $(li).append(time);
+        
+        var dayElm = document.createElement("span");
+        dayElm.className = "day";
+        dayElm.textContent = day;
+        
+        var monthElm = document.createElement("span");
+        monthElm.className = "month";
+        monthElm.textContent = month;
+        
+        var yearElm = document.createElement("span");
+        yearElm.className = "year";
+        yearElm.textContent = "2017";
+        
+        $(time).append(dayElm);
+        $(time).append(yearElm);
+        $(time).append(monthElm);
+        
+        var divInfo = document.createElement("div");
+        divInfo.className = "info";
 
+        var h2 = document.createElement("h2");
+        h2.className = "title";
+        h2.textContent = title;
+        
+        var p = document.createElement("p");
+        p.className = "desc";
+        p.textContent = description;
+        
+        $(li).append(divInfo);
+        $(divInfo).append(h2);
+        $(divInfo).append(p);
+        
+        var divSocial = document.createElement("div");
+        divSocial.className = "social";
+        
+        var ulSocial = document.createElement("ul");
+    
+        var liSocial = document.createElement("li");
+        liSocial.className = "google-plus";
+        liSocial.style = "width:33%";
+        
+        var aSocial = document.createElement("a");
+        aSocial.href = "#google-plus";
+        
+        var spanSocial = document.createElement("span");
+        spanSocial.className = "fa fa-calendar";
+        
+        $(li).append(divSocial);
+        $(divSocial).append(ulSocial);
+        $(ulSocial).append(liSocial);
+        $(liSocial).append(aSocial);
+        $(aSocial).append(spanSocial)
+    };
+    
     /* Function Calls */
 
     /******************************************************** 
@@ -134,4 +197,11 @@ $(document).ready(function() {
     magnificAllPics();
 
     AOS.init();
+    
+    /************************************************************** 
+     *  AREA TO ADD EVENT                                         *
+     *                                                            *
+     * EX. createEvent('JUL', '1', "Event Title", "Description"); *
+     **************************************************************/
+    createEvent("JUL" , "1", "Hozaifa's Birthday", "It was awesome!");
 });
