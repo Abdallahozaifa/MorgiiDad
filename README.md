@@ -14,7 +14,7 @@
 https://morgiidad-abdallahozaifa.c9users.io:8081
 
 ## To deploy this application execute this exact command 
-# 1. First comment skip files portion on app.yaml!!!!!!!!!!!
+# 1. First uncomment skip files portion on app.yaml!!!!!!!!!!!
 /home/ubuntu/workspace/google-cloud-sdk/bin/gcloud app deploy app.yaml --project markdistrictwebsite --verbosity=info
 
 ## The application is currently hosted on this link
