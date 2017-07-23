@@ -268,7 +268,8 @@ label {
 }
 
 #upcomingevents {
-    background: url(https://bootstrapmade.com/demo/themes/Laura/img/bg-banner03.jpg) 0% 13%;
+    background: url("/static/images/bluesky.jpg") 0% 13%;
+    background-size: cover;
 }
 
 /* Events CSS Section
@@ -498,3 +499,9 @@ label {
 .upcomingevents-header{
     color: #333;
 }
+
+.headingWrap{
+    margin-bottom: -10%;
+}
+
+/* Donation Section CSS */

@@ -38,9 +38,28 @@ class MainPage(Handler):
 			else:
 				mail_message = mail.EmailMessage(sender="atterholtfordistrictjudge@gmail.com", subject="%s at <%s (%s)> emailed you from atterholtfordistrictjudge.com!" % (name, email, phone))
 			
-			dir(mail_message)
-			# mail_message.to = "Mark Atterholt<atterholtfordistrictjudge@gmail.com>"
-			# mail_message.body = message
-			# mail_message.send()
+			mail_message.to = "Mark Atterholt<atterholtfordistrictjudge@gmail.com>"
+			mail_message.body = message
+			mail_message.send()
 			
-app = webapp2.WSGIApplication([('/', MainPage)])
+class DonationPage(Handler):
+		def get(self):
+				   self.render("donation.html")
+		def post(self):
+			name = self.request.get('name')
+			email = self.request.get('email')
+			address = self.request.get('address')
+			occupation = self.request.get('occupation')
+			
+			mail_message = mail.EmailMessage(sender="atterholtfordistrictjudge@gmail.com", subject="New Donation from %s" % name)
+			
+			mail_message.to = "Mark Atterholt<atterholtfordistrictjudge@gmail.com>"
+			mail_message.body =  ('You have received a donation from ' + name + '!\n' 
+			+ 'Their information is\n'
+			+ 'Name: ' + name + '\n' 
+			+ 'Email: ' + email + '\n'
+			+ 'Address: ' + address + '\n'
+			+ 'Occupation: ' + occupation)
+			mail_message.send()
+			
+app = webapp2.WSGIApplication([('/', MainPage), ('/donation', DonationPage)])

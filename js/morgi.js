@@ -5,10 +5,16 @@ $(document).ready(function() {
     /* Variable Declarations */
     var form = {};
     var imgCount = 1;
-    // All of the images in the photo gallery 
-    var pics = [];
-
+    var navItems = $("#myNavbar > ul > li");
+    var navBar = $("#myNavbar");
+    var pics = []; // All of the images in the photo gallery 
     form.submit = $(".submit-btn"); // form submit button
+
+    /* Collapses navbar when item is clicked */
+    navItems.click(function() {
+        console.log("Clicked navbar item!!");
+        navBar.toggleClass("in", false);
+    });
 
     /* Click handler that executes when user clicks submit button */
     form.submit.click(function(e) {
@@ -23,36 +29,46 @@ $(document).ready(function() {
         console.log(form.phone.val());
         console.log(form.message.val());
 
+
         var emailData = {};
 
-        if (form.phone != "") {
-            emailData = {
-                "name": form.firstName.val() + " " + form.lastName.val(),
-                "phone": form.phone.val(),
-                "email": form.email.val(),
-                "message": form.message.val()
-            };
+        if (form.phone == "") {
+            if (form.phone != "") {
+                emailData = {
+                    "name": form.firstName.val() + " " + form.lastName.val(),
+                    "phone": form.phone.val(),
+                    "email": form.email.val(),
+                    "message": form.message.val()
+                };
+            }
+            else {
+                emailData = {
+                    "name": form.firstName.val() + " " + form.lastName.val(),
+                    "email": form.email.val(),
+                    "message": form.message.val()
+                }
+            }
+
+            /* Send contact info to the server through a post request */
+            $.ajax({
+                url: "/",
+                method: "POST",
+                type: 'json',
+                data: emailData,
+                crossDomain: true
+            }, function success(data) {
+
+            });
+            clearForm();
         }
         else {
-            emailData = {
-                "name": form.firstName.val() + " " + form.lastName.val(),
-                "email": form.email.val(),
-                "message": form.message.val()
-            }
+            swal(
+                'OOPS',
+                'Please fill in all the required fields!',
+                'error'
+            )
         }
-
-        /* Send contact info to the server through a post request */
-        $.ajax({
-            url: "/",
-            method: "POST",
-            type: 'json',
-            data: emailData,
-            crossDomain: true
-        }, function success(data) {
-
-        });
         e.preventDefault();
-        clearForm();
     });
 
     /* Clears the form */
@@ -113,70 +129,78 @@ $(document).ready(function() {
             }, 1000);
         }
     });
-    
-    
-    var createEvent = function(month, day, title, description){
+
+    var eventCount = 0;
+    var createEvent = function(month, day, title, description) {
         var li = document.createElement("li");
         $(".event-list").append(li);
-        
+        if (eventCount % 2 == 0)
+            $(li).attr("data-aos", "fade-right");
+        else
+            $(li).attr("data-aos", "fade-left");
+
+        $(li).attr("data-aos-easing", "ease-out-cubic");
+        $(li).attr("data-aos-duration", "2000");
+
         var time = document.createElement("time");
         time.className = "event-date";
-        
+
         $(li).append(time);
-        
+
         var dayElm = document.createElement("span");
         dayElm.className = "day";
         dayElm.textContent = day;
-        
+
         var monthElm = document.createElement("span");
         monthElm.className = "month";
         monthElm.textContent = month;
-        
+
         var yearElm = document.createElement("span");
         yearElm.className = "year";
         yearElm.textContent = "2017";
-        
+
         $(time).append(dayElm);
         $(time).append(yearElm);
         $(time).append(monthElm);
-        
+
         var divInfo = document.createElement("div");
         divInfo.className = "info";
 
         var h2 = document.createElement("h2");
         h2.className = "title";
         h2.textContent = title;
-        
+
         var p = document.createElement("p");
         p.className = "desc";
         p.textContent = description;
-        
+
         $(li).append(divInfo);
         $(divInfo).append(h2);
         $(divInfo).append(p);
-        
+
         var divSocial = document.createElement("div");
         divSocial.className = "social";
-        
+
         var ulSocial = document.createElement("ul");
-    
+
         var liSocial = document.createElement("li");
         liSocial.className = "google-plus";
         liSocial.style = "width:33%";
-        
+
         var aSocial = document.createElement("a");
         aSocial.href = "#google-plus";
-        
+
         var spanSocial = document.createElement("span");
         spanSocial.className = "fa fa-calendar";
-        
+
         $(li).append(divSocial);
         $(divSocial).append(ulSocial);
         $(ulSocial).append(liSocial);
         $(liSocial).append(aSocial);
-        $(aSocial).append(spanSocial)
+        $(aSocial).append(spanSocial);
+        eventCount++;
     };
-    
+
     /* Function Calls */
 
     /******************************************************** 
@@ -184,24 +208,39 @@ $(document).ready(function() {
      *  MUST BE BEFORE magnificAllPics function call below!  *
      *  EX. addPic('hozaifa.jpg', 'Hozaifa is awesome!');    *
      *********************************************************/
-    addPic('Christmas.jpg', 'Dave!');
-    addPic('family.jpg', 'Familia! <3');
-    addPic('beginning.jpg', 'When I became an OG!');
-    addPic('ClearGroupPhoto.jpg', 'Hanging with the big dogs!');
-    addPic('children.jpeg', 'Chilling with the homies! :))');
-    addPic('sign.jpg', 'Holding up the signs!');
-    addPic('soup.jpg', 'I like eating soup!');
-    addPic('dave.jpg', 'I like mercer!');
+    addPic('Christmas.jpg');
+    addPic('family.jpg');
+    addPic('beginning.jpg');
+    addPic('ClearGroupPhoto.jpg');
+    addPic('children.jpeg');
+    addPic('sign.jpg');
+    addPic('soup.jpg');
+    addPic('dave.jpg');
+    addPic('Easter egg hunt.jpg');
+    addPic('Lincoln Day Dinner 3.JPG');
+    addPic('Veterans.jpg');
+    addPic('Penn State Athletics.jpg')
+    addPic("Mark.jpg")
 
     //DON'T TOUCH
     magnificAllPics();
 
     AOS.init();
-    
+
     /************************************************************** 
      *  AREA TO ADD EVENT                                         *
      *                                                            *
      * EX. createEvent('JUL', '1', "Event Title", "Description"); *
      **************************************************************/
-    createEvent("JUL" , "1", "Hozaifa's Birthday", "It was awesome!");
+    createEvent("AUG", "12", "Lakeland FOP Steak Fry");
+    createEvent("AUG", "19", "Hermitage Fire Department Gun Raffle");
+    createEvent("AUG", "27", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign! Held at the Mercer County Shrine Club from 12-6")
+    createEvent("AUG", "28", "Hermitage FOP Steak Fry");
+    createEvent("SEPT", "4", "Buhl Day");
+    createEvent("SEPT", "24th", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign! Held at the Mercer County Shrine Club. Time TBA")
+    createEvent("OCT", "10", "Last Day to Register to vote");
+    createEvent("OCT", "31", "Last Day to Apply for Civilian Absentee Ballot");
+    createEvent("NOV", "3", "Last Day for County to Receive Voted Civilian Absentee Ballotts");
+    createEvent("NOV", "7", "Municipal Election", "Don't forget to get out and vote!");
+
 });

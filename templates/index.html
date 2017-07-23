@@ -16,8 +16,15 @@
     <link rel="stylesheet" href="../static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="../static/css/magnific-popup.css" type="text/css">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.css" type="text/css" />
 </head>
 
+<script>
+    function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        console.log(obj);
+    }
+</script>
 
 
 <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
@@ -43,7 +50,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#aboutmark" style="color:white">About Mark</a></li>
                     <li><a href="#photogallery" style="color:white">Photo Gallery</a></li>
-                    <li><a href="#upcomingevents" style="color:white">Upcoming Events</a></li>
+                    <li><a href="#upcomingevents" style="color:white">Events</a></li>
                     <li><a href="#contactme" style="color:white">Contact Us</a></li>
                     <li><a href="#donate" style="color:white">Donate</a></li>
                 </ul>
@@ -53,7 +60,7 @@
 
     <!-- First Container -->
 
-    <div class="container-fluid bg-1 text-center dad-background" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">>
+    <div class="container-fluid bg-1 text-center dad-background" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="container">
 
             <div class="row" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
@@ -97,14 +104,14 @@
         <h1 class="margin">About Mark</h1>
 
         <h2>Family</h2>
-        <p> Mark is a very proud husband and father. He and his wife, Roxanne, have been married for 22 years. Roxanne is a full time faculty member at Penn State University at the Shenango Campus. They have raised their three children in the West Middlesex
-            Area School District and are honored to be members of this close knit and hard-working community. Mark’s three children; Riley, Morgan and Luke have thrived academically and athletically with their God given talents and hard work. The good
-            fortune of having dedicated teachers and coaches has most certainly helped them accomplish wonderful things. Riley and Morgan are currently attending Penn State University while Luke is a West Middlesex High School student. Mark is the son
-            of Lois and the late, Bob Atterholt. He is a graduate of Reynolds High School where he excelled in the classroom as well as on the field. This combination afforded Mark the opportunity to attend the University of Pennsylvania and compete in
-            Division I intercollegiate athletics. Mark later chose to continue his education at Temple University, where he graduated with a Bachelor’s Degree in Business Administration. Mark and his family have been members of New Life Baptist Church,
-            in New Wilmington for 18 years. Mark has been active with his church family and was honored to have served as a Deacon. Riley, Morgan and Luke have participated in missions trips and their family has hosted multiple international children
-            through the World Help Organization. Mark has also served his community by coaching several youth basketball and baseball teams as well as serving on the West Middlesex Midget Football Board of Directors. For six years and prior to its recent
-            sale in order to campaign for District Judge, Mark was the owner of a successful family-run small business in West Middlesex. This business experience will serve him well when overseeing the day to day operations of a District Court.
+        <p> Mark is a very proud husband and father. He and his wife, Roxanne, have been married for 22 years. Roxanne is a faculty member at Penn State University at the Shenango Campus. They have raised their three children in the West Middlesex Area School
+            District and are honored to be members of this close knit and hard-working community. Mark’s three children; Riley, Morgan and Luke have thrived academically and athletically with their God given talents and hard work. The good fortune of
+            having dedicated teachers and coaches has most certainly helped them accomplish wonderful things. Riley and Morgan are currently attending Penn State University while Luke is a West Middlesex High School student. Mark is the son of Lois and
+            the late, Bob Atterholt. He is a graduate of Reynolds High School where he excelled in the classroom as well as on the field. This combination afforded Mark the opportunity to attend the University of Pennsylvania and compete in Division I
+            intercollegiate athletics. Mark later chose to continue his education at Temple University, where he graduated with a Bachelor’s Degree in Business Administration. Mark and his family have been members of New Life Baptist Church, in New Wilmington
+            for 18 years. Mark has been active with his church family and was honored to have served as a Deacon. Riley, Morgan and Luke have participated in missions trips and their family has hosted multiple international children through the World
+            Help Organization. Mark has also served his community by coaching several youth basketball and baseball teams as well as serving on the West Middlesex Midget Football Board of Directors. For six years and prior to its recent sale in order
+            to campaign for District Judge, Mark was the owner of a successful family-run small business in West Middlesex. This business experience will serve him well when overseeing the day to day operations of a District Court.
 
         </p>
 
@@ -146,7 +153,7 @@
         <div class="container" style="margin-top:10px;">
             <div class="row form-group">
 
-                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <div class="panel panel-default">
                         <a class="group-photo-link-1" href="../static/images/Christmas.jpg">
                             <div class="panel-image">
@@ -161,7 +168,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-6" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <div class="col-xs-12 col-md-6" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <div class="panel panel-default">
                         <a class="group-photo-link-2" href="../static/images/family.jpg">
                             <div class="panel-image hide-panel-body">
@@ -177,7 +184,7 @@
             </div>
 
             <div class="row form-group">
-                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                         </div>
@@ -193,7 +200,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-6" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <div class="col-xs-12 col-md-6" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <div class="panel panel-default">
                         <a class="group-photo-link-4" href="../static/images/ClearGroupPhoto.jpg">
                             <div class="panel-image">
@@ -212,7 +219,7 @@
 
             <div class="row form-group">
 
-                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <div class="panel panel-default">
                         <a class="group-photo-link-5" href="../static/images/children.jpeg">
                             <div class="panel-image hide-panel-body">
@@ -226,7 +233,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <div class="panel panel-default">
                         <a class="group-photo-link-6" href="../static/images/sign.jpg">
                             <div class="panel-image">
@@ -243,7 +250,7 @@
 
             <div class="row form-group">
 
-                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <div class="panel panel-default">
 
                         <a class="group-photo-link-7" href="../static/images/soup.jpg">
@@ -259,7 +266,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-6" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <div class="col-xs-12 col-md-6" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                     <div class="panel panel-default">
                         <a class="group-photo-link-8" href="../static/images/dave.jpg">
                             <div class="panel-image">
@@ -273,8 +280,94 @@
 
                     </div>
                 </div>
+                
+                
             </div>
+         <div class="row form-group">
 
+                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <div class="panel panel-default">
+
+                        <a class="group-photo-link-9" href="../static/images/Easter egg hunt.jpg">
+                            <div class="panel-image hide-panel-body">
+                                <img src="../static/images/Easter egg hunt.jpg" class="panel-image-preview" />
+                                <label for="toggle-3" class="photogallery-image"></label>
+                            </div>
+                        </a>
+                        <div class="panel-body">
+                            <h4>No Easter eggs for Mark but he enjoyed meeting residents at the annual Shenango Township Easter Egg Hunt</h4>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-6" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <div class="panel panel-default">
+                        <a class="group-photo-link-10" href="../static/images/Lincoln Day Dinner 3.JPG">
+                            <div class="panel-image">
+                                <img src="../static/images/Lincoln Day Dinner 3.JPG" class="panel-image-preview" />
+                                <label for="toggle-4" class="photogallery-image"></label>
+                            </div>
+                        </a>
+                        <div class="panel-body">
+                            <h4>Mark and Reverend Bruce Richael at the Lincoln Day Dinner</h4>
+                        </div>
+
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+             <div class="row form-group">
+
+                <div class="col-xs-12 col-md-6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <div class="panel panel-default">
+
+                        <a class="group-photo-link-11" href="../static/images/Veterans.jpg">
+                            <div class="panel-image hide-panel-body">
+                                <img src="../static/images/Veterans.jpg" class="panel-image-preview" />
+                                <label for="toggle-3" class="photogallery-image"></label>
+                            </div>
+                        </a>
+                        <div class="panel-body">
+                            <h4>Proud Veterans, Frank Zelinsky and Tom Flynn join Mark at our steak fry</h4>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-6" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <div class="panel panel-default">
+                        <a class="group-photo-link-12" href="../static/images/Penn State Athletics.jpg">
+                            <div class="panel-image">
+                                <img src="../static/images/Penn State Athletics.jpg" class="panel-image-preview" />
+                                <label for="toggle-4" class="photogallery-image"></label>
+                            </div>
+                        </a>
+                        <div class="panel-body">
+                            <h4>Good luck to Coach Andre Smith as he brings intercollegiate atletics back to PSU Shenango</h4>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="col-xs-12 col-md-6" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <div class="panel panel-default">
+                        <a class="group-photo-link-13" href="../static/images/Mark.jpg">
+                            <div class="panel-image">
+                                <img src="../static/images/Mark.jpg" class="panel-image-preview" />
+                                <label for="toggle-4" class="photogallery-image"></label>
+                            </div>
+                        </a>
+                        <div class="panel-body">
+                            <h4>Mark had the pleasure of watching Mark Benedetto's induction into the Mercer County Hall of Fame</h4>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
 
         </div>
     </div>
@@ -284,44 +377,11 @@
     <!--https://bootsnipp.com/snippets/featured/agenda-->
     <!--data-aos="flip-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000"-->
     <div class="container-fluid bg-2 text-center" id="upcomingevents" data-aos="fade-in">
-        <h1 class="margin upcomingevents-header">Upcoming Events</h1><br>
-        <!--<div class="row">-->
-        <!--    <div>-->
-        <!--        <p>July 17th, 2017: Farrell FOP Steak Fry</p>-->
-        <!--        <p>August 12th, 2017: Lakeland FOP Steak Fry</p>-->
-        <!--        <p>August 19th, 2017: Hermitage Fire Department Gun Raffle </p>-->
-        <!--        <p>August 28th, 2017: Hermitage FOP Steak Fry</p>-->
-        <!--        <p>September 4th, 2017: Buhl Day</p>-->
-        <!--        <p>October 10th, 2017: Last Day to Register to vote!</p>-->
-        <!--        <p>October 31st, 2017: Last Day to Apply for Civilian Absentee Ballot</p>-->
-        <!--        <p>November 3rd, 2017: Last Day for County to Receive Voted Civilian Absentee Ballotts</p>-->
-        <!--        <p>Novemeber 7th, 2017: Municipal Election! </p>-->
-        <!--    </div>-->
-
-        <!--</div>-->
+        <h1 class="margin upcomingevents-header">Events</h1><br>
         <div class="container">
             <div class="row">
                 <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
                     <ul class="event-list">
-                        <li>
-                            <time datetime="2014-07-20" class="event-date">
-							<span class="day">17</span>
-							<span class="month">Jul</span>
-							<span class="year">2017</span>
-							<span class="time">ALL DAY</span>
-						</time>
-                            <div class="info">
-                                <h2 class="title">Farrell FOP</h2>
-                                <p class="desc">Steak Fry</p>
-                            </div>
-                            <div class="social">
-                                <ul>
-                                    <!--<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>-->
-                                    <!--<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>-->
-                                    <li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-calendar"></span></a></li>
-                                </ul>
-                            </div>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -335,7 +395,10 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h1>Contact Us</h1>
+                    
                     <p class="lead">We would welcome your feedback and offers of support in any way- which could include hosting a yard sign, hosting a meet and greet, poll workers, or door knocking!</p>
+                    <p>atterholtfordistrictjudge@gmail.com</p>
+                    <p>(724) 301-7045</p>
                     <form id="contact-form">
                         <div class="messages"></div>
                         <div class="controls">
@@ -343,14 +406,14 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="form_name">Firstname *</label>
-                                        <input id="form_firstname" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required data-error="Firstname is required.">
+                                        <input id="form_firstname" type="text" name="name" class="form-control" placeholder="Please enter your firstname *">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="form_lastname">Lastname *</label>
-                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -359,7 +422,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="form_email">Email *</label>
-                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -375,7 +438,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="form_message">Message *</label>
-                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message*" rows="4"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -407,36 +470,47 @@
     <div class="container-fluid bg-2 text-center" id="donate" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
         <div class="container">
             <div class="row">
-                <div class="paymentCont">
-                    <div class="headingWrap">
-                        <h1 class="headingTop text-center">Select Your Donation Method</h1>
-                        <p class="text-center">Your donation is very much appreciated!</p>
-                    </div>
-                    <div class="paymentWrap">
-                        <div class="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">
-                            <label class="btn paymentMethod">
-					            	<div class="method visa"></div>
-					                <input type="radio" name="options" checked> 
-					        </label>
-                            <label class="btn paymentMethod">
-					            	<div class="method master-card"></div>
-					                <input type="radio" name="options"> 
-					            </label>
-                            <label class="btn paymentMethod">
-				            		<div class="method amex"></div>
-					                <input type="radio" name="options">
-					            </label>
-                            <label class="btn paymentMethod">
-				             		<div class="method vishwa"></div>
-					                <input type="radio" name="options"> 
-					            </label>
-                            <label class="btn paymentMethod">
-				             		<div class="method paypal"></div>
-					                <input type="radio" name="options"> 
-					            </label>
-                        </div>
-                    </div>
+                <div class="headingWrap">
+                    <h1 class="headingTop text-center">Select Your Donation Method</h1>
+                    <p class="text-center">Your donation is very much appreciated!</p>
                 </div>
+                <!--   <div class="paymentCont">-->
+                <!--       <div class="headingWrap">-->
+                <!--           <h1 class="headingTop text-center">Select Your Donation Method</h1>-->
+                <!--           <p class="text-center">Your donation is very much appreciated!</p>-->
+                <!--       </div>-->
+                <!--       <div class="paymentWrap">-->
+                <!--           <div class="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">-->
+                <!--               <label class="btn paymentMethod">-->
+                <!--    	<div class="method visa"></div>-->
+                <!--        <input type="radio" name="options" checked> -->
+                <!--</label>-->
+                <!--               <label class="btn paymentMethod">-->
+                <!--    	<div class="method master-card"></div>-->
+                <!--        <input type="radio" name="options"> -->
+                <!--    </label>-->
+                <!--               <label class="btn paymentMethod">-->
+                <!--   		<div class="method amex"></div>-->
+                <!--        <input type="radio" name="options">-->
+                <!--    </label>-->
+                <!--               <label class="btn paymentMethod">-->
+                <!--    		<div class="method vishwa"></div>-->
+                <!--        <input type="radio" name="options"> -->
+                <!--    </label>-->
+                <!--               <label class="btn paymentMethod">-->
+                <!--    		<div class="method paypal"></div>-->
+                <!--        <input type="radio" name="options"> -->
+                <!--    </label>-->
+                <!--           </div>-->
+                <!--       </div>-->
+                <!--   </div>-->
+                <iframe src="/donation" frameborder="0" scrolling="no" onload="resizeIframe(this)" id="donation-form" width="100%"></iframe>
+                <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">-->
+                <!--    <input type="hidden" name="cmd" value="_s-xclick">-->
+                <!--    <input type="hidden" name="hosted_button_id" value="PY5XEJTUVRNCA">-->
+                <!--    <input type="image" src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">-->
+                <!--    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
+                <!--</form>-->
             </div>
         </div>
 
@@ -449,6 +523,7 @@
         <p>Site developed by <a href="http://hozaifaabdalla.com/" target="_blank">Hozaifa Abdalla</a> and Morgan Atterholt</p>
     </footer>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>
     <script type="text/javascript" src="../js/morgi.js"></script>
 </body>
 

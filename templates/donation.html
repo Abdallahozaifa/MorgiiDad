@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mark Atterholt</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+    <link href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/78060/animate.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../static/css/donation.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.css" type="text/css" />
+</head>
+
+<body>
+    <section id="details">
+        <div class="contact-info">
+            <!--<h2>Donation</h2>-->
+            <form class="clearfix">
+                <div class="input-group-2">
+                    <label>First Name *</label>
+                    <input type="text" id="firstName" tabindex="1">
+                </div>
+                <div class="input-group-2">
+                    <label>Last Name *</label>
+                    <input type="text" id="lastName" tabindex="2">
+                </div>
+                <div class="input-group-1">
+                    <label>Email Address *</label>
+                    <input type="text" id="email" tabindex="3">
+                </div>
+                <hr>
+                <div class="input-group-1">
+                    <label>Street Address *</label>
+                    <input type="text" id="street" tabindex="4">
+                </div>
+                <div class="input-group-3">
+                    <label>City *</label>
+                    <input type="text" id="city" tabindex="5">
+                </div>
+                <div class="input-group-3">
+                    <label>State *</label>
+                    <input type="text" id="state" tabindex="6">
+                </div>
+                <div class="input-group-3">
+                    <label>Zip Code *</label>
+                    <input type="text" id="zipcode" tabindex="7">
+                </div>
+                <div class="input-group-1">
+                    <label>Occupation *</label>
+                    <input type="text" id="occupation" tabindex="8">
+                </div>
+            </form>
+            <div class="clearfix">
+                <!--<button class="next" type="button" value="Donate" name="submit">Donate</button>-->
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="PY5XEJTUVRNCA">
+                    <button name="submit" class="next">Donate</button>
+                    <!--<input type="image" src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">-->
+                    <!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
+                </form>
+                <label>* These fields are required.</label>
+            </div>
+        </div>
+    </section>
+
+    <!--<section id="card">-->
+    <!--    <div class="contact-info">-->
+    <!--        <h2>Payment Information</h2>-->
+    <!--        <form class="clearfix">-->
+    <!--            <div class="input-group-1">-->
+    <!--                <label>Card Number</label>-->
+    <!--                <input type="text">-->
+    <!--            </div>-->
+    <!--            <div class="clearfix">-->
+    <!--                <div class="input-group-2">-->
+    <!--                    <label>Expiration Date</label>-->
+    <!--                    <input type="text">-->
+    <!--                </div>-->
+
+    <!--                <div class="input-group-2">-->
+    <!--                    <label>Security Code (CVV)</label>-->
+    <!--                    <input type="text">-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <hr>-->
+    <!--            <div class="input-group-1">-->
+    <!--                <label>Employer</label>-->
+    <!--                <input type="text">-->
+    <!--            </div>-->
+
+    <!--            <div class="input-group-1">-->
+    <!--                <label>Occupation</label>-->
+    <!--                <input type="text">-->
+    <!--            </div>-->
+    <!--        </form>-->
+    <!--        <div class="clearfix">-->
+    <!--            <button class="back" type="button">Back-->
+    <!--  <span></span>-->
+    <!--  <span></span>-->
+    <!--  <span></span>-->
+    <!--</button>-->
+    <!--            <button class="next" type="button">Review</button>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
+
+    <!--<section class="processing">-->
+    <!--    <div class="check">-->
+    <!--        <span></span>-->
+    <!--        <div class="mask">-->
+    <!--        </div>-->
+    <!--        <span></span>-->
+    <!--    </div>-->
+
+    <!--    <div class="outer">-->
+    <!--        <div class="inner">-->
+    <!--        </div>-->
+    <!--        <div class="progress">-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <span class="message">Processing</span>-->
+    <!--</section>-->
+
+    <!--<section id="check">-->
+    <!--    <h2>Confirm Payment</h2>-->
+    <!--    <p>Please confirm your contribution of</p>-->
+    <!--    <span>$8888</span>-->
+    <!--    <button class="next" type="button">Confirm</button>-->
+    <!--</section>-->
+
+    <!--<section id="confirm">-->
+    <!--    <h2>Thank You!</h2>-->
+    <!--    <p>Your <span class="amount">$25</span> donation will help us reach <strong>570</strong>!</p>-->
+    <!--</section>-->
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>
+<script type="text/javascript" src="../js/donation.js"></script>
+
+</html>
