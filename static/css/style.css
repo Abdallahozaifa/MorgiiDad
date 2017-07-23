@@ -1,7 +1,6 @@
 @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
-
 body {
     font: 20px Montserrat, sans-serif;
     line-height: 1.5;
@@ -13,7 +12,7 @@ p {
 }
 
 .margin {
-    margin-bottom: 45px;
+    margin-bottom: -4%;
 }
 
 .bg-1 {
@@ -272,12 +271,20 @@ label {
     background-size: cover;
 }
 
+
 /* Events CSS Section
 */
 
+
 /*body {*/
+
+
 /*    padding: 60px 0px;*/
+
+
 /*    background-color: rgb(220, 220, 220);*/
+
+
 /*}*/
 
 .event-list {
@@ -305,8 +312,13 @@ label {
     text-transform: uppercase;
 }
 
+
 /*.event-list>li:nth-child(even)>time {*/
+
+
 /*    background-color: rgb(165, 82, 167);*/
+
+
 /*}*/
 
 .event-list>li>time>span {
@@ -424,7 +436,7 @@ label {
     background-color: rgb(221, 75, 57) !important;
 }
 
-.info{
+.info {
     color: #333;
 }
 
@@ -496,12 +508,13 @@ label {
     padding: 60px 0px;
 }
 
-.upcomingevents-header{
+.upcomingevents-header {
     color: #333;
 }
 
-.headingWrap{
+.headingWrap {
     margin-bottom: -10%;
 }
 
-/* Donation Section CSS */
+
+/* About Me CSS */

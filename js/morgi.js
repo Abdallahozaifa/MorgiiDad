@@ -232,15 +232,15 @@ $(document).ready(function() {
      *                                                            *
      * EX. createEvent('JUL', '1', "Event Title", "Description"); *
      **************************************************************/
-    createEvent("AUG", "12", "Lakeland FOP Steak Fry");
-    createEvent("AUG", "19", "Hermitage Fire Department Gun Raffle");
+    createEvent("AUG", "12", "Lakeland FOP Steak Fry", " ");
+    createEvent("AUG", "19", "Hermitage Fire Department Gun Raffle", " ");
     createEvent("AUG", "27", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign! Held at the Mercer County Shrine Club from 12-6")
-    createEvent("AUG", "28", "Hermitage FOP Steak Fry");
-    createEvent("SEPT", "4", "Buhl Day");
+    createEvent("AUG", "28", "Hermitage FOP Steak Fry", " ");
+    createEvent("SEPT", "4", "Buhl Day", " ");
     createEvent("SEPT", "24th", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign! Held at the Mercer County Shrine Club. Time TBA")
-    createEvent("OCT", "10", "Last Day to Register to vote");
-    createEvent("OCT", "31", "Last Day to Apply for Civilian Absentee Ballot");
-    createEvent("NOV", "3", "Last Day for County to Receive Voted Civilian Absentee Ballotts");
+    createEvent("OCT", "10", "Last Day to Register to vote", " ");
+    createEvent("OCT", "31", "Last Day to Apply for Civilian Absentee Ballot", " ");
+    createEvent("NOV", "3", "Last Day for County to Receive Voted Civilian Absentee Ballotts", " ");
     createEvent("NOV", "7", "Municipal Election", "Don't forget to get out and vote!");
 
 });
