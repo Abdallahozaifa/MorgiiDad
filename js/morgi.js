@@ -231,10 +231,10 @@ $(document).ready(function() {
      **************************************************************/
     createEvent("AUG", "12", "Lakeland FOP Steak Fry", " ");
     createEvent("AUG", "19", "Hermitage Fire Department Gun Raffle", " ");
-    createEvent("AUG", "27", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign! Held at the Mercer County Shrine Club from 12-6")
+    createEvent("AUG", "27", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign and enjoy some good food! Held at the Mercer County Shrine Club from 12 AM-6 PM")
     createEvent("AUG", "28", "Hermitage FOP Steak Fry", " ");
     createEvent("SEPT", "4", "Buhl Day", " ");
-    createEvent("SEPT", "24th", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign! Held at the Mercer County Shrine Club. Time TBA")
+    createEvent("SEPT", "24", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign and enjoy some good food! Held at the Mercer County Shrine Club. Time TBA")
     createEvent("OCT", "10", "Last Day to Register to vote", " ");
     createEvent("OCT", "31", "Last Day to Apply for Civilian Absentee Ballot", " ");
     createEvent("NOV", "3", "Last Day for County to Receive Voted Civilian Absentee Ballotts", " ");
