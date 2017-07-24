@@ -134,10 +134,7 @@ $(document).ready(function() {
     var createEvent = function(month, day, title, description) {
         var li = document.createElement("li");
         $(".event-list").append(li);
-        if (eventCount % 2 == 0)
-            $(li).attr("data-aos", "fade-right");
-        else
-            $(li).attr("data-aos", "fade-left");
+        $(li).attr("data-aos", "fade-right");
 
         $(li).attr("data-aos-easing", "ease-out-cubic");
         $(li).attr("data-aos-duration", "2000");
@@ -208,19 +205,19 @@ $(document).ready(function() {
      *  MUST BE BEFORE magnificAllPics function call below!  *
      *  EX. addPic('hozaifa.jpg', 'Hozaifa is awesome!');    *
      *********************************************************/
-    addPic('Christmas.jpg');
-    addPic('family.jpg');
-    addPic('beginning.jpg');
-    addPic('ClearGroupPhoto.jpg');
-    addPic('children.jpeg');
-    addPic('sign.jpg');
-    addPic('soup.jpg');
-    addPic('dave.jpg');
-    addPic('Easter egg hunt.jpg');
-    addPic('Lincoln Day Dinner 3.JPG');
-    addPic('Veterans.jpg');
-    addPic('Penn State Athletics.jpg')
-    addPic("Mark.jpg")
+    addPic('Christmas.jpg', "");
+    addPic('family.jpg', "");
+    addPic('beginning.jpg', "");
+    addPic('ClearGroupPhoto.jpg', "");
+    addPic('children.jpeg', "");
+    addPic('sign.jpg', "");
+    addPic('soup.jpg', "");
+    addPic('dave.jpg', "");
+    addPic('Easter egg hunt.jpg', "");
+    addPic('Lincoln Day Dinner 3.JPG', "");
+    addPic('Veterans.jpg', "");
+    addPic('Penn State Athletics.jpg', "")
+    addPic("Mark.jpg", "")
 
     //DON'T TOUCH
     magnificAllPics();
