@@ -1,6 +1,5 @@
-/* global $, AOS*/
+/* global $, AOS, swal*/
 $(document).ready(function() {
-    console.log("Morgi JS File Running! :)");
 
     /* Variable Declarations */
     var form = {};
@@ -12,7 +11,6 @@ $(document).ready(function() {
 
     /* Collapses navbar when item is clicked */
     navItems.click(function() {
-        console.log("Clicked navbar item!!");
         navBar.toggleClass("in", false);
     });
 
@@ -23,17 +21,12 @@ $(document).ready(function() {
         form.email = $("#form_email");
         form.phone = $("#form_phone");
         form.message = $("#form_message");
-        console.log(form.firstName.val());
-        console.log(form.lastName.val());
-        console.log(form.email.val());
-        console.log(form.phone.val());
-        console.log(form.message.val());
-
 
         var emailData = {};
 
-        if (form.phone == "") {
-            if (form.phone != "") {
+        /* Form information has been filled in regardless of phone info */
+        if (form.firstName.val() != "" && form.lastName.val() != "" && form.email.val() != "" && form.message.val() != "") {
+            if (form.phone.val() != "") {
                 emailData = {
                     "name": form.firstName.val() + " " + form.lastName.val(),
                     "phone": form.phone.val(),
@@ -56,17 +49,31 @@ $(document).ready(function() {
                 type: 'json',
                 data: emailData,
                 crossDomain: true
-            }, function success(data) {
-
+            }).done(function(data) {
+                clearForm();
+                if (data == "Success") {
+                    swal({
+                        title: 'Thank you for contacting us!',
+                        text: 'We will respond in a timely manner!',
+                        type: 'success',
+                        timer: 3000,
+                    });
+                }
+                else {
+                    swal(
+                        'Problem with the server!',
+                        'Please try again!',
+                        'error'
+                    );
+                }
             });
-            clearForm();
         }
-        else {
+        else if (form.firstName.val() == "" || form.lastName.val() == "" || form.email.val() == "" || form.message.val() == "") {
             swal(
                 'OOPS',
                 'Please fill in all the required fields!',
                 'error'
-            )
+            );
         }
         e.preventDefault();
     });
@@ -231,10 +238,10 @@ $(document).ready(function() {
      **************************************************************/
     createEvent("AUG", "12", "Lakeland FOP Steak Fry", " ");
     createEvent("AUG", "19", "Hermitage Fire Department Gun Raffle", " ");
-    createEvent("AUG", "27", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign and enjoy some good food! Held at the Mercer County Shrine Club from 12 AM-6 PM")
-    createEvent("AUG", "28", "Hermitage FOP Steak Fry", " ");
+    createEvent("AUG", "26", "Hermitage FOP Steak Fry", " ");
+    createEvent("AUG", "27", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign and enjoy some good food! Held at the Mercer County Shrine Club from 12 AM-6 PM");
     createEvent("SEPT", "4", "Buhl Day", " ");
-    createEvent("SEPT", "24", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign and enjoy some good food! Held at the Mercer County Shrine Club. Time TBA")
+    createEvent("SEPT", "24", "Atterholt for District Judge Fundraiser", "Join us to raise funds to help our campaign and enjoy some good food! Held at the Mercer County Shrine Club. Time TBA");
     createEvent("OCT", "10", "Last Day to Register to vote", " ");
     createEvent("OCT", "31", "Last Day to Apply for Civilian Absentee Ballot", " ");
     createEvent("NOV", "3", "Last Day for County to Receive Voted Civilian Absentee Ballotts", " ");

@@ -1,4 +1,4 @@
-/* global $*/
+/* global $, swal*/
 $(document).ready(function() {
     var form = {};
     form.firstName = $("#firstName");
@@ -31,14 +31,14 @@ $(document).ready(function() {
             form.zipcode.val() == "" ||
             form.state.val() == "" ||
             form.occupation.val() == ""
-        ){
+        ) {
             return false;
         }
         return true;
     };
 
     $('#details .next').on("click", function(e) {
-        console.log(form.email.val());
+        e.preventDefault();
         form.submit.email = form.email.val();
         form.submit.occupation = form.occupation.val();
         form.submit.address = form.street.val() + " " + form.city.val() + " " + form.state.val() + " " + form.zipcode.val();
@@ -51,7 +51,6 @@ $(document).ready(function() {
                 'Please fill in all the required fields!',
                 'error'
             );
-            e.preventDefault();
         }
         else {
 
@@ -69,27 +68,27 @@ $(document).ready(function() {
                 type: 'json',
                 data: emailData,
                 crossDomain: true
-            }, function success(data) {
-
+            }).done(function(data) {
+                if (data == "Success") {
+                    clearForm();
+                    swal({
+                        title: 'Your information was sent to Atterholt!',
+                        text: 'Currently Redirecting to Paypal',
+                        type: 'success',
+                        timer: 2000
+                    });
+                    setTimeout(function() {
+                        window.parent.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PY5XEJTUVRNCA";
+                    }, 2000);
+                }
+                else {
+                    swal(
+                        'Problem with the server!',
+                        'Please try again!',
+                        'error'
+                    );
+                }
             });
-            clearForm();
-            // swal({
-            //         title: 'Thank you for the information',
-            //         text: 'Redirecting to Paypal',
-            //         timer: 2000
-            //     }).then(
-            //         function() {},
-            //         // handling the promise rejection
-            //         function(dismiss) {
-            //             if (dismiss === 'timer') {
-            //                 window.location.href = "https://www.paypal.com/donate/?token=OojGnlR2tX109ZiLMq3Ns3oz-arLHydM6td7zpvgIT0TqucrxXeh7G7mKm21t9v6gH8Bim&country.x=US&locale.x=US";
-            //             }
-            //         }
-            //     )
-            // e.preventDefault();
-            // window.location.href = "https://www.paypal.com/donate/?token=OojGnlR2tX109ZiLMq3Ns3oz-arLHydM6td7zpvgIT0TqucrxXeh7G7mKm21t9v6gH8Bim&country.x=US&locale.x=US";
         }
     });
-
-
 });

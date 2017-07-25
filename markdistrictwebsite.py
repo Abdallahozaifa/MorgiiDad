@@ -27,12 +27,7 @@ class MainPage(Handler):
 			phone = self.request.get('phone')
 			email = self.request.get('email')
 			message = self.request.get('message')
-			
-			print name;
-			print phone;
-			print email;
-			print message;
-			
+
 			if phone == "":
 				mail_message = mail.EmailMessage(sender="atterholtfordistrictjudge@gmail.com", subject="%s at <%s> emailed you from atterholtfordistrictjudge.com!" % (name, email))
 			else:
@@ -41,6 +36,8 @@ class MainPage(Handler):
 			mail_message.to = "Mark Atterholt<atterholtfordistrictjudge@gmail.com>"
 			mail_message.body = message
 			mail_message.send()
+
+			self.response.out.write('Success');
 			
 class DonationPage(Handler):
 		def get(self):
@@ -61,5 +58,7 @@ class DonationPage(Handler):
 			+ 'Address: ' + address + '\n'
 			+ 'Occupation: ' + occupation)
 			mail_message.send()
+			
+			self.response.out.write('Success');
 			
 app = webapp2.WSGIApplication([('/', MainPage), ('/donation', DonationPage)])
